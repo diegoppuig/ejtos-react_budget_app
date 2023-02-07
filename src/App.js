@@ -18,7 +18,7 @@ const App = () => {
                         <Budget />
                     </div>
                     <div className='col-sm'>
-                        <RemainingBudget />
+                        <RemainingBudget/>
                     </div>
                     <div className='col-sm'>
                         <ExpenseTotal />

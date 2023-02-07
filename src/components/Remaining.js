@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext'; 
+
 const Remaining = () => {
     const { expenses, budget } = useContext(AppContext);
     const totalExpenses = expenses.reduce((total, item) => {
-        return (total = total + item.cost);
+        return (total += item.cost);
     }, 0);
-    const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
+    // eslint-disable-next-line
+   // const alertType = totalExpenses > budget ? 'alert-danger' : '';//Código Inútil Cartel rojo no esiste pariente
     return (
-        <div className={`alert ${alertType}`}>
+        <div className={`alert alert-success`}>
             <span>Remaining: £{budget - totalExpenses}</span>
         </div>
     );
